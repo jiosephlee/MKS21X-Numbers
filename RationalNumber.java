@@ -1,36 +1,98 @@
-public class RationalNumber{
-  private int num;
-  private int denom;
-  public RationalNumber(){
-    num = 0;
-    denom = 1;
+public class RationalNumber extends RealNumber
+{
+  private int num, denom;
+
+  /**Initialize the RationalNumber with the provided values
+  *  if the denominator is 0, make the fraction 0/1 instead
+  *@param nume the numerator
+  *@param deno the denominator
+  */
+  public RationalNumber(int nume, int deno){
+    super(0.0);//this value is ignored!
   }
-  public RationalNumber(int a, int b){
-    num = a;
-    denom = b;
+
+  public double getValue(){
+    return 0.0;
   }
-  public RationalNumber getValue(){
-    return new RationalNumber(num,denom);
+
+  /**
+  *@return the numerator
+  */
+  public int getNumerator(){
+    return 0;
   }
-  public static RationalNumber add(RationalNumber a, RationalNumber b){
-    return new RationalNumber(1,1);
+  /**
+  *@return the denominator
+  */
+  public int getDenominator(){
+    return 0;
   }
-  public static RationalNumber subtract(RationalNumber a, RationalNumber b){
-    return new RationalNumber(1,1);
+  /**
+  *@return a new RationalNumber that has the same numerator
+  *and denominator as this RationalNumber but reversed.
+  */
+  public RationalNumber reciprocal(){
+    return null;
   }
-  public static RationalNumber multiply(RationalNumber a, RationalNumber b){
-    return new RationalNumber(1,1);
+  /**
+  *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
+  */
+  public boolean equals(RationalNumber other){
+    return false;
   }
-  public static RationalNumber divide(RationalNumber a, RationalNumber b){
-    return new RationalNumber(1,1);
-  }
-  public RationalNumber square(){
-    return new RationalNumber(1,1);
-  }
-  public RationalNumber sqrt(){
-    return new RationalNumber(1,1);
-  }
+
+
+  /**
+  *@return the value expressed as "3/4" or "8/3"
+  */
   public String toString(){
-    return "" + getValue();
+    return "0";
+  }
+
+  /**Calculate the GCD of two integers.
+  *@param a the first integers
+  *@param b the second integer
+  *@return the value of the GCD
+  */
+  private static int gcd(int a, int b){
+    /*use euclids method or a better one*/
+    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
+    return 0;
+  }
+
+  /**
+  *Divide the numerator and denominator by the GCD
+  *This must be used to maintain that all RationalNumbers are
+  *reduced after construction.
+  */
+  private void reduce(){
+
+  }
+  /******************Operations Return a new RationalNumber!!!!****************/
+  /**
+  *Return a new RationalNumber that is the product of this and the other
+  */
+  public RationalNumber multiply(RationalNumber other){
+    return null;
+  }
+
+  /**
+  *Return a new RationalNumber that is the this divided by the other
+  */
+  public RationalNumber divide(RationalNumber other){
+    return null;
+  }
+
+  /**
+  *Return a new RationalNumber that is the sum of this and the other
+  */
+  public RationalNumber add(RationalNumber other){
+    return null;
+  }
+  /**
+  *Return a new RationalNumber that this minus the other
+  */
+  public RationalNumber subtract(RationalNumber other){
+    return null;
   }
 }

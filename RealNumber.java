@@ -1,34 +1,46 @@
 public class RealNumber{
-  private double number;
+  private double value;
 
-  public RealNumber(){
-    number = 0;
+  public RealNumber(double v){
+    value = v;
   }
-  public RealNumber(double x){
-    number = x;
+
+  /*
+  *Return the sum of this and the other
+  */
+  public double add(RealNumber other){
+     //other can be ANY RealNumber, including a RationalNumber
+     //or other subclasses of RealNumber (that aren't written yet)
+     return 0.0 + other.getValue() + value;
   }
+
+  /*
+  *Return the product of this and the other
+  */
+  public double multiply(RealNumber other){
+    return 1.0 * value * other.getValue();
+  }
+
+  /*
+  *Return the this divided by the other
+  */
+  public double divide(RealNumber other){
+    return  (0.0 + value) / other.getValue();
+  }
+
+  /*
+  *Return the this minus the other
+  */
+  public double subtract(RealNumber other){
+    return 0.0 + value - other.getValue();
+  }
+
+
   public double getValue(){
-    return number;
+    return value;
   }
+
   public String toString(){
-    return "" + getValue();
-  }
-  public static double add(double a, double b){
-    return 1;
-  }
-  public static double subtract(double a, double b){
-    return 1;
-  }
-  public static double multiply(double a, double b){
-    return 1;
-  }
-  public static double divide(double a, double b){
-    return 1;
-  }
-  public double square(){
-    return 1;
-  }
-  public double sqrt(){
-    return 1;
+    return "" + value;
   }
 }
