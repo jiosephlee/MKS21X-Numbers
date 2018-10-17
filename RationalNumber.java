@@ -8,6 +8,8 @@ public class RationalNumber extends RealNumber{
     }else{
       num = numer;
       denom = denomer;
+      num = num / gcd(num,denom);
+      denom = denom / gcd(num,denom);
     }
   }
 
@@ -33,6 +35,11 @@ public class RationalNumber extends RealNumber{
 
 
   public String toString(){
+    if (denom < 0){
+      num = num * -1
+      denom = denom * -1
+    }
+    
     return num + "/" + denom;
   }
 
